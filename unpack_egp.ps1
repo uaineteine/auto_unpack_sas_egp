@@ -21,6 +21,12 @@ if ($files) {
     # Define the source file path
     $src = Join-Path -Path $dir -ChildPath $files[$fileIndex].Name
 
+    # Define the intermediate copy path
+    $intermediateCopy = Join-Path -Path $dir -ChildPath "_egp.zip"
+
+    # Copy the source file to the intermediate location
+    Copy-Item -Path $src -Destination $intermediateCopy
+
     # Define the destination directory
     $dest = Join-Path -Path $dir -ChildPath "unpacked"
 
@@ -29,8 +35,11 @@ if ($files) {
         New-Item -ItemType directory -Path $dest
     }
 
-    # Unzip the selected file to the destination directory
-    Expand-Archive -Path $src -DestinationPath $dest
+    # Unzip the intermediate copy to the destination directory
+    Expand-Archive -Path $intermediateCopy -DestinationPath $dest
+
+    # Delete the intermediate copy after unpacking
+    Remove-Item -Path $intermediateCopy
 } else {
     Write-Host "No $fileExtension files found in the directory."
 }

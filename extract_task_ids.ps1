@@ -1,5 +1,5 @@
 # Load the XML file
-[xml]$xmlContent = Get-Content 'project.xml'
+[xml]$xmlContent = Get-Content 'unpacked/project.xml'
 
 $tasks = $xmlContent | Select-Xml -XPath '//Element[@Type="SAS.EG.ProjectElements.CodeTask"]/Element' | ForEach-Object {
     [PSCustomObject]@{
