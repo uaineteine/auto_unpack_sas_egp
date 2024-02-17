@@ -9,4 +9,8 @@ $tasks = $xmlContent | Select-Xml -XPath '//Element[@Type="SAS.EG.ProjectElement
     }
 }
 # Export the output array to a CSV file
-$tasks | Export-Csv -Path 'code_task_map.csv' -NoTypeInformation
+$destinationDir = Split-Path -Path $destinationPath -Parent
+if (!(Test-Path -Path "processed")) {
+    New-Item -ItemType Directory -Path "processed" | Out-Null
+}
+$tasks | Export-Csv -Path 'processed/code_task_map.csv' -NoTypeInformation

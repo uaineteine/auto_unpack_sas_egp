@@ -1,5 +1,5 @@
 # Import the CSV file
-$csvData = Import-Csv -Path "code_task_map.csv"
+$csvData = Import-Csv -Path "processed/code_task_map.csv"
 
 # Iterate over each row in the CSV
 foreach ($row in $csvData) {
