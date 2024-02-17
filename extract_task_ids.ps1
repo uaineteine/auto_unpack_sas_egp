@@ -9,7 +9,6 @@ $tasks = $xmlContent | Select-Xml -XPath '//Element[@Type="SAS.EG.ProjectElement
     }
 }
 # Export the output array to a CSV file
-$destinationDir = Split-Path -Path $destinationPath -Parent
 if (!(Test-Path -Path "processed")) {
     New-Item -ItemType Directory -Path "processed" | Out-Null
 }
