@@ -1,0 +1,7 @@
+<Element Type="SAS.EG.ProjectElements.CodeTask">
+  <Element>
+    <label>labelname</label>
+    <Type>TASK</Type>
+    <ID>1234xyzgh</ID>
+  </Element>
+</Element>
