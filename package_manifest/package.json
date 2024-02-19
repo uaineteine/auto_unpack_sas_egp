@@ -1,6 +1,6 @@
 {
     "name": "UnpackEGP",
-    "version": "0.0.1",
+    "version": "0.1",
     "publisher": "Daniel Stamer-Squair",
     "engines": {
         "vscode": "^1.0.0"
