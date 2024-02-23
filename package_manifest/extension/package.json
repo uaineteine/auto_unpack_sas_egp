@@ -15,7 +15,7 @@
     "contributes": {
         "commands": [{
             "command": "extension.run_extractegp_ps",
-            "title": "Run PowerShell Script"
+            "title": "Run Extraction of EGP"
         }],
         "menus": {
             "editor/context": [{
