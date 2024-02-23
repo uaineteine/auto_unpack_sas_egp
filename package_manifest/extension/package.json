@@ -18,7 +18,7 @@
             "title": "Run Extraction of EGP"
         }],
         "menus": {
-            "editor/context": [{
+            "explorer/context": [{
                 "command": "extension.run_extractegp_ps",
                 "group": "navigation"
             }]
